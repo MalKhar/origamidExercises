@@ -65,7 +65,6 @@ allImages.forEach((image) => {
 const externalLink = document.querySelector('.menu a[href^="http"]');
 
 externalLink.setAttribute("href", "testeeeeee");
-*/
 
 // Verifique a distância da primeira imagem
 // em relação ao topo da página
@@ -86,3 +85,27 @@ images.forEach((image) => {
 
 // Se o browser for menor que 720px,
 // adicione a classe menu-mobile ao menu
+
+
+// Duplique o menu e adicione ele em copy
+
+const menu = document.querySelector(".menu");
+const menuCopy = menu.cloneNode(true);
+
+const copy = document.querySelector(".copy");
+
+copy.appendChild(menuCopy);
+
+// Selecione o primeiro DT da dl de Faq
+const faqDt = document.querySelector(".faq dt");
+
+// Selecione o DD referente ao primeiro DT
+const firstDd = faqDt.nextElementSibling;
+
+// Substitua o conteúdo html de .faq pelo de .animais
+
+const faq = document.querySelector(".faq");
+const animais = document.querySelector(".animais");
+
+faq.innerHTML = animais.innerHTML;
+*/
